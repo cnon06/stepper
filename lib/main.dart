@@ -60,20 +60,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   onStepCancel: () {
                     setState(() {
                       if (currentStep > 0) currentStep--;
-                      steps[currentStep] = Step(
-                          title: Text("Step${currentStep + 1}"),
-                          content: Text("Content${currentStep + 1}"),
-                          isActive: false);
+                      
                     });
                   },
                   onStepContinue: () {
                     setState(() {
                      
                       if (currentStep < steps.length - 1) {
-                          steps[currentStep] = Step(
-                          title: Text("Step${currentStep + 1}"),
-                          content: Text("Content${currentStep + 1}"),
-                          isActive: true);
+                       
                         currentStep++;
                       }
                       else {
